@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.inputData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.inputData form {
+  height: 180px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.inputData form label {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.inputData form input[type=text] {
+  width: 70%;
+  height: 40px;
+  padding: 12px 20px;
+  margin: 8px 0 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.inputData form .showTable {
+  width: 130px;
+  height: 40px;
+  position: relative;
+  right: -270px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.tableData {
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .tableData {
+    width: 100%;
+  }
+}
+
+.tableData table, .tableData th, .tableData td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+.tableData th, .tableData td {
+  padding: 5px 15px;
+}
+
+@media (max-width: 768px) {
+  .tableData table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+.autocompleteBox {
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 70px;
+}
+
+.autocompleteBox .asteroids {
+  width: 220px;
+}
+
+.autocompleteBox .timesPassed {
+  display: block;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 17px;
+  width: 250px;
+}
+
+.autocompleteBox .none {
+  display: none;
+}
+
+.autocompleteBox p {
+  width: 85%;
+  display: inline-block;
+}
+
+.autocompleteBox i {
+  color: red;
+  width: 10px;
+}
+
+.autocompleteBox i:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

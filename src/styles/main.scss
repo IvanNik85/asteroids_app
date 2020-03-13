@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.inputData {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding-top: 100px;    
+    width: 100%;    
+    form {
+        height: 180px;
+        width: 400px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end; 
+        label {
+            width: 30%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 17px;
+        }
+        input[type=text] {
+            width: 70%;
+            height: 40px;
+            padding: 12px 20px;
+            margin: 8px 0 0 0;
+            box-sizing: border-box;     
+          }     
+        .showTable {
+            width: 130px;
+            height: 40px;
+            position: relative;
+            right: -270px;
+            font-size: 15px;
+            margin-top: 8px
+        }
+    }     
+}
+
+.tableData {
+    width: 60%;    
+    margin: auto;
+    display: flex;
+    justify-content: center;    
+    margin-top: 100px;  
+    @media (max-width: 768px) {       
+        width: 100%;   
+    }    
+    table, th, td {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }       
+    th, td {
+        padding: 5px 15px;
+    }   
+    table {  
+        @media (max-width: 768px) {
+            display: block;     
+            overflow-x: auto; 
+            width: 100%;   
+        }   
+    } 
+}
+.autocompleteBox {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 70px;
+
+    .asteroids {
+        width: 220px;
+        // border: 2px solid black;
+    }
+    .timesPassed {
+        display: block;
+        padding: 10px;
+        margin: 15px 0;
+        font-size: 17px;  
+        width: 250px;
+    }
+    .none {
+        display: none;
+    }
+    p {
+        width: 85%;
+        display: inline-block;
+    }
+    i {
+        color: red;
+        width: 10px;        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
