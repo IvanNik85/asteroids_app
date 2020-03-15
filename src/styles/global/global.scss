@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
+.showTable, .timesPassed, .backBtn {
+    border: 3px solid #248ec4;
+    font-weight: 700;
+    color: #248ec4;
+    background: transparent;
+    transition: .3s;
+    &:hover {
+        background: #248ec4;
+        color: #fff;
+        cursor: pointer;
+    }    
+    &:focus {
+        outline: none;
+    }    
+}
+
+.none {
+    display: none;
+}
+.swal2-icon.swal2-warning {
+    border-color: #f4d538;
+    color: #f4d538;
+}
+.swal2-styled.swal2-confirm {
+    background-color: #62a4e2;
+}
+
+

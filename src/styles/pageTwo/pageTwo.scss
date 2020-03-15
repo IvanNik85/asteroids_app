@@ -1,0 +1,42 @@
+.pageTwo {
+    padding: 50px 100px;
+    height: 100vh;
+    .backBtn {
+        width: 85px;
+        height: 40px;
+        font-size: 17px;
+    }
+    .astOne {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: start;
+        // padding-left: 10px;
+        margin: 25px 0px;
+        .name {
+            width: 170px;
+            height: 45px;            
+            line-height: 45px;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .chart {
+            width: 500px;
+            height: 45px;            
+            .chartload {
+                height: 100%;  
+                display: flex;
+                justify-content: center;
+                align-items: center;              
+            }           
+        }
+        @media (max-width: 776px) {
+            height: 90px;
+            margin: 15px 0px;
+        }
+    }
+    @media (max-width: 870px) {
+        padding: 50px;
+    }
+}

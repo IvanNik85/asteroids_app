@@ -1,0 +1,70 @@
+.autocompleteBox {
+    width: calc(100vw - 40%);
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin: 70px auto;
+    .numberPasses {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .astChosen {
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        height: 40px;
+        margin-bottom: 10px;
+        .chosenInput {
+            padding: 5px 20px;
+            width: 90%;  
+            border: 3px solid #7dc4e6;    
+            &:focus {
+                outline: none;
+                border: 3px solid #248ec4; 
+                transition: .3s;
+            } 
+        }           
+        ::placeholder {
+            font-size: 17px;           
+        }                 
+        @media (max-width: 700px) {
+            width: 260px;
+        }
+    }
+    .asteroids {
+        width: 230px;
+        height: 230px;
+        padding: 5px 0;
+        border: 2px solid #717171;
+    }    
+    .timesPassed {
+        display: block;
+        padding: 10px;
+        margin: 15px 0;
+        font-size: 17px;  
+        width: 250px;
+    }    
+    .none {
+        display: none;
+    }
+    p {
+        width: 85%;
+        display: inline-block;
+        padding: 1px 10px;
+        font-size: 16px;
+    }
+    i {
+        color: #ff4b4b;
+        width: 10px;  
+        font-size: 18px; 
+        position: relative;
+        top: 2px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

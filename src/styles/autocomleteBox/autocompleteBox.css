@@ -1,0 +1,119 @@
+.autocompleteBox {
+  width: calc(100vw - 40%);
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 70px auto;
+}
+
+.autocompleteBox .numberPasses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.autocompleteBox .astChosen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.autocompleteBox .astChosen .chosenInput {
+  padding: 5px 20px;
+  width: 90%;
+  border: 3px solid #7dc4e6;
+}
+
+.autocompleteBox .astChosen .chosenInput:focus {
+  outline: none;
+  border: 3px solid #248ec4;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.autocompleteBox .astChosen ::-webkit-input-placeholder {
+  font-size: 17px;
+}
+
+.autocompleteBox .astChosen :-ms-input-placeholder {
+  font-size: 17px;
+}
+
+.autocompleteBox .astChosen ::-ms-input-placeholder {
+  font-size: 17px;
+}
+
+.autocompleteBox .astChosen ::placeholder {
+  font-size: 17px;
+}
+
+@media (max-width: 700px) {
+  .autocompleteBox .astChosen {
+    width: 260px;
+  }
+}
+
+.autocompleteBox .asteroids {
+  width: 230px;
+  height: 230px;
+  padding: 5px 0;
+  border: 2px solid #717171;
+}
+
+.autocompleteBox .timesPassed {
+  display: block;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 17px;
+  width: 250px;
+}
+
+.autocompleteBox .none {
+  display: none;
+}
+
+.autocompleteBox p {
+  width: 85%;
+  display: inline-block;
+  padding: 1px 10px;
+  font-size: 16px;
+}
+
+.autocompleteBox i {
+  color: #ff4b4b;
+  width: 10px;
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+}
+
+.autocompleteBox i:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=autocompleteBox.css.map */

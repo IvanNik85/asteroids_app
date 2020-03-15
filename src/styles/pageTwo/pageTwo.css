@@ -1,0 +1,66 @@
+.pageTwo {
+  padding: 50px 100px;
+  height: 100vh;
+}
+
+.pageTwo .backBtn {
+  width: 85px;
+  height: 40px;
+  font-size: 17px;
+}
+
+.pageTwo .astOne {
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin: 25px 0px;
+}
+
+.pageTwo .astOne .name {
+  width: 170px;
+  height: 45px;
+  line-height: 45px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.pageTwo .astOne .chart {
+  width: 500px;
+  height: 45px;
+}
+
+.pageTwo .astOne .chart .chartload {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 776px) {
+  .pageTwo .astOne {
+    height: 90px;
+    margin: 15px 0px;
+  }
+}
+
+@media (max-width: 870px) {
+  .pageTwo {
+    padding: 50px;
+  }
+}
+/*# sourceMappingURL=pageTwo.css.map */

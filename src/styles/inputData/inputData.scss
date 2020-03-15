@@ -1,0 +1,52 @@
+.inputData {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding-top: 100px;    
+    width: 100%;    
+    form {
+        position: relative;
+        height: 180px;
+        width: 450px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end; 
+        label {
+            width: 30%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 17px;
+        }
+        input[type=date] {
+            width: 70%;
+            height: 40px;
+            padding: 12px 20px;
+            margin: 8px 0 0 0;
+            box-sizing: border-box; 
+            font-size: 16px;
+            font-weight: 700;
+            color: #757272;
+            border: 2px solid #a0a0a0;
+            &:focus {
+                outline: none;
+            }    
+        }   
+        .showTable {
+            width: 150px;
+            height: 40px;
+            position: relative;
+            right: -265px;
+            font-size: 15px;
+            margin-top: 8px;
+            @media (max-width: 440px) {
+                left: 50px;
+                top: 15px;
+            }
+        }
+        #startDate, #endDate {
+            padding: 10px;
+            width: 280px;
+        }
+    }     
+}

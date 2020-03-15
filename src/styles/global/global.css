@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.showTable, .timesPassed, .backBtn {
+  border: 3px solid #248ec4;
+  font-weight: 700;
+  color: #248ec4;
+  background: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.showTable:hover, .timesPassed:hover, .backBtn:hover {
+  background: #248ec4;
+  color: #fff;
+  cursor: pointer;
+}
+
+.showTable:focus, .timesPassed:focus, .backBtn:focus {
+  outline: none;
+}
+
+.none {
+  display: none;
+}
+
+.swal2-icon.swal2-warning {
+  border-color: #f4d538;
+  color: #f4d538;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #62a4e2;
+}
+/*# sourceMappingURL=global.css.map */

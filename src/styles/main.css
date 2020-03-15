@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .inputData {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,7 +15,7 @@
 
 .inputData form {
   height: 180px;
-  width: 400px;
+  width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,7 +36,7 @@
   font-size: 17px;
 }
 
-.inputData form input[type=text] {
+.inputData form input[type=date] {
   width: 70%;
   height: 40px;
   padding: 12px 20px;
@@ -52,13 +45,29 @@
           box-sizing: border-box;
 }
 
+.inputData form input[type=date] {
+  font-size: 16px;
+  font-weight: 700;
+  color: #757272;
+  border: 2px solid #a0a0a0;
+}
+
+.inputData form input[type=date]:focus {
+  outline: none;
+}
+
 .inputData form .showTable {
-  width: 130px;
+  width: 150px;
   height: 40px;
   position: relative;
-  right: -270px;
+  right: -265px;
   font-size: 15px;
   margin-top: 8px;
+}
+
+.inputData form #startDate, .inputData form #endDate {
+  padding: 10px;
+  width: 280px;
 }
 
 .tableData {
@@ -86,6 +95,14 @@
 
 .tableData th, .tableData td {
   padding: 10px 15px;
+}
+
+.tableData th {
+  background: #ffe359;
+}
+
+.tableData tr:nth-child(odd) {
+  background: #8bc4e0a6;
 }
 
 @media (max-width: 768px) {
@@ -145,7 +162,7 @@
 .autocompleteBox .astChosen .chosenInput {
   padding: 5px 20px;
   width: 90%;
-  border: 3px solid #8bc4e0;
+  border: 3px solid #7dc4e6;
 }
 
 .autocompleteBox .astChosen .chosenInput:focus {
@@ -175,7 +192,7 @@
   width: 230px;
   height: 230px;
   padding: 5px 0;
-  border: 2px solid black;
+  border: 2px solid #717171;
 }
 
 .autocompleteBox .timesPassed {
@@ -194,13 +211,15 @@
   width: 85%;
   display: inline-block;
   padding: 1px 10px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .autocompleteBox i {
-  color: red;
+  color: #ff4b4b;
   width: 10px;
   font-size: 18px;
+  position: relative;
+  top: 2px;
 }
 
 .autocompleteBox i:hover {
@@ -213,7 +232,7 @@
 }
 
 .pageTwo .backBtn {
-  width: 70px;
+  width: 85px;
   height: 40px;
   font-size: 17px;
 }
@@ -240,7 +259,7 @@
   padding-left: 10px;
   line-height: 45px;
   display: inline-block;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .pageTwo .astOne .chart {
@@ -250,9 +269,57 @@
 
 .pageTwo .astOne .chart .chartload {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.showTable, .timesPassed, .backBtn {
+  border: 3px solid #248ec4;
+  font-weight: 700;
+  color: #248ec4;
+  background: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.showTable:hover, .timesPassed:hover, .backBtn:hover {
+  background: #248ec4;
+  color: #fff;
+  cursor: pointer;
+}
+
+.showTable:focus, .timesPassed:focus, .backBtn:focus {
+  outline: none;
 }
 
 .none {
   display: none;
+}
+
+.swal2-icon.swal2-warning {
+  border-color: #f4d538;
+  color: #f4d538;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #62a4e2;
 }
 /*# sourceMappingURL=main.css.map */
