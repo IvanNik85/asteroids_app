@@ -47,7 +47,8 @@
 .autocompleteBox .astChosen .chosenInput {
   padding: 5px 20px;
   width: 90%;
-  border: 3px solid #7dc4e6;
+  border: 3px solid #61aed3;
+  color: #248ec4;
 }
 
 .autocompleteBox .astChosen .chosenInput:focus {

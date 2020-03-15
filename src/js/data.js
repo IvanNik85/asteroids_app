@@ -1,7 +1,7 @@
-import {showData} from "./showData";
+import {Show} from "./showData";
 
 // ****** DATA ****** //
-export const Data = (function () {
+export const Data = (() => {
     const getData = () => {   
         const inputStart = document.querySelector("#startDate");
         const inputEnd = document.querySelector("#endDate"); 
@@ -23,7 +23,7 @@ export const Data = (function () {
               )    
         } else if(startDate.getDate() > endDate.getDate()){  
             Swal.fire(
-                'Start Date mora biti manji od end date vrednosti!',
+                'Pocetni datum mora biti manji od krajnjeg datuma!',
                 'Molimo pokusajte ponovo',
                 'warning'
               )  
@@ -36,7 +36,7 @@ export const Data = (function () {
         } else {
         fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${inputStart.value}&end_date=${inputEnd.value}&api_key=x0HeIJzRCLm3lj0zrfXt2LltusKVCO7aoHmRkVq2`)
             .then(response => response.json())            
-            .then(data => showData(data))            
+            .then(data => Show.showData(data))            
             .catch(err => console.error(err));            
         }
     }   
