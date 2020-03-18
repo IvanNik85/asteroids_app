@@ -6,21 +6,23 @@ export const Chart = (() => {
     const backBtn = document.querySelector(".backBtn");
    
     // Chart creating function
-    function charts() {  
+    const charts = () => {  
         if(!Asteroids.chartsData().length) {
             Swal.fire(
-                'Odaberite neku vrednost!',
-                'Molimo pokusajte ponovo',
+                `You didn't select an asteroid!`,
+                'Please try again',
                 'warning'
                 ) 
             return;
         }    
+
         // Filter asteroid passes near Earth 
         Asteroids.chartsData().map(item => {           
             item[1] = item[1].filter(dat => {
                 return parseInt(dat.close_approach_date) > 1900 && parseInt(dat.close_approach_date) < 1999    
             })           
         })
+
         // Create charts and color them appropriately
         Asteroids.chartsData().map((item, i) => {           
             let div = document.createElement('div');
@@ -41,8 +43,7 @@ export const Chart = (() => {
     
             // Animate charts
             let load = 0
-            let int = setInterval(interval, 30);
-            function interval() {
+            let int = setInterval(() => {
                 div3.style.width = `${load}%`;
                 if(load === item[1].length) {
                     clearInterval(int)
@@ -50,9 +51,10 @@ export const Chart = (() => {
                     colorChoice();
                     load++; 
                 }
-            }     
+            }, 30);  
+            
             // Select chart color according to length
-            function colorChoice() {    
+            const colorChoice = () => {    
                 if(item[1].length <= 25) {
                     div3.style.background = '#71cb54';
                 } else if(item[1].length > 25 && item[1].length <= 45) {
@@ -65,20 +67,22 @@ export const Chart = (() => {
             }
         })
         changePage();
-    }
-
-    backBtn.addEventListener("click", goBack);
+    }   
+     
     // Going to table page and removing charts
-    function goBack() {
+    const goBack = () => {
         const astOne = document.querySelectorAll(".astOne"); 
         astOne.forEach(r => r.parentNode.removeChild(r));        
         changePage(); 
-    }   
+    }       
+    backBtn.addEventListener("click", goBack);
+
      // Changing pages function
-    function changePage() {   
+    const changePage = () => {   
         pageOne.classList.toggle("none");
         pageTwo.classList.toggle("none"); 
     }
+
     return {
         charts,
         changePage

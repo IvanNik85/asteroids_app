@@ -8,6 +8,7 @@ export const Asteroids = (() => {
     // Select asteroids and display them in the field
     const asteroidSelect = (e) => {
         let selected = true; 
+        
         history.map(val => {
             if(e.target.value === val.name && chartValues.every(s => !~s.indexOf(e.target.value))) {
                 chartValues = [...chartValues, [val.name, val.close_approach_data]];  
@@ -25,8 +26,8 @@ export const Asteroids = (() => {
         })  
         // Disable selecting double values
         selected && Swal.fire(
-            'Ovaj asteroid ste vec odabrali!',
-            'Molimo pokusajte ponovo',
+            `Asteroid already selected!`,
+            'Please try again',
             'warning'
             )           
         e.target.value = "" 
@@ -58,6 +59,7 @@ export const Asteroids = (() => {
     const retrive = data => {      
         history = [...history, data]    
     }
+
     return {
         chartsData,
         historyData,

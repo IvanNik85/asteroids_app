@@ -1,6 +1,6 @@
 import {Show} from "./showData";
 
-// ****** DATA ****** //
+// ******************** DATA ********************** //
 export const Data = (() => {
     const getData = () => {   
         const inputStart = document.querySelector("#startDate");
@@ -8,29 +8,29 @@ export const Data = (() => {
         const startDate = new Date(inputStart.value);
         const endDate = new Date(inputEnd.value); 
 
-        // Filtriranje unetih inputa i prikazivanje vrednosti
+        // Filter entered inputs and display values
         if(inputStart.value === "" || inputEnd.value === "") { 
             Swal.fire(
-                'Niste uneli vrednosti!',
-                'Molimo pokusajte ponovo',
+                `You didn't enter a value!`,
+                'Please try again',
                 'warning'
                 )           
         } else if(endDate.getDate() - startDate.getDate() > 7 || endDate.getDate() - startDate.getDate() === 0) {  
             Swal.fire(
-                'Raspon mora biti 7 dana ili manji!',
-                'Molimo pokusajte ponovo',
+                'The range must be 7 days or less!',
+                'Please try again',
                 'warning'
               )    
         } else if(startDate.getDate() > endDate.getDate()){  
             Swal.fire(
-                'Pocetni datum mora biti manji od krajnjeg datuma!',
-                'Molimo pokusajte ponovo',
+                'Start date must be less than End date!',
+                'Please try again',
                 'warning'
               )  
         } else if(startDate.getFullYear() < 1900){ 
             Swal.fire(
-                'Unesite godinu od 1900!',
-                'Molimo pokusajte ponovo',
+                'Enter the year from 1900!',
+                'Please try again',
                 'warning'
               )   
         } else {
@@ -40,6 +40,7 @@ export const Data = (() => {
             .catch(err => console.error(err));            
         }
     }   
+
     return {
         getData
     }

@@ -5,7 +5,7 @@ export const Show = (() => {
     let tableCreated = false;
     let hazardousAsteroid = [];
 
-    const showData = dataPar => {
+    const showData = dataPar => {        
         // Reset values
         hazardousAsteroid.length = 0;
         Asteroids.historyData().length = 0;
@@ -38,6 +38,7 @@ export const Show = (() => {
         const astField = document.querySelectorAll(".asteroids div");
         tableCreated && astField.forEach(r => r.parentNode.removeChild(r));
     }
+    
     return {
         showData
     }

@@ -3,7 +3,7 @@ import {Chart} from "./charts";
 // Generating table and data
 export const Create = (() => {
     const table = one => {   
-        const tableHeaders = ["Datum", "Ime", "Brzina kretanja(km/h)", "Min.precnik(m)", "Max.precnik(m)"];
+        const tableHeaders = ["Date", "Name", "Movement speed(km/h)", "Min.diameter(m)", "Max.diameter(m)"];
         const timesPassed = document.querySelector(".timesPassed"); 
         const autocomplete = document.querySelector("#displayed");
         const tab = document.querySelector(".tableData");        
@@ -21,7 +21,7 @@ export const Create = (() => {
             const th = document.createElement("th");
             th.innerHTML = name;
             tr.appendChild(th);
-            tableHead.appendChild(tr);  
+            tableHead.appendChild(tr);             
         })       
     
         one.map(hazardous => {            
@@ -43,6 +43,7 @@ export const Create = (() => {
         timesPassed.classList.remove("none");
         timesPassed.addEventListener("click", Chart.charts);       
     }
+    
     return {
         table
     }
