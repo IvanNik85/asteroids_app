@@ -3,20 +3,67 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Inter', sans-serif;
+    position: relative;
+    // background: #1c2840;
+    background: url('https://wallpaperplay.com/walls/full/c/9/d/17341.jpg') no-repeat center;
+    // background-size: cover;
+    min-height: 100vh; 
+    .wrap {
+        position: absolute;
+        background: rgba(0,0,0,.6);
+        width: 100vw;   
+        min-height: 100%;
+    }
 }
+
+.pageOne {    
+
+    .heading {
+        background: #f4d538;
+        width: 400px;
+        height: 90px;
+        border: 4px solid #248ec4;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+
+        @media (max-width: 500px) {
+            width: 315px;
+            height: 75px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Asteroid';
+            font-weight: normal;
+            color: #248ec4;
+            font-size: 52px;
+            margin-top: 5px;
+            @media (max-width: 500px) {
+                font-size: 40px; 
+            }
+        }
+    }    
+}
+
 .showTable, .timesPassed, .backBtn {
     border: 3px solid #248ec4;
     font-weight: 700;
     color: #248ec4;
     background: transparent;
     transition: .3s;
+
     &:hover {
         background: #248ec4;
         color: #fff;
         cursor: pointer;
     }    
+
     &:focus {
         outline: none;
     }    
@@ -25,12 +72,18 @@ body {
 .none {
     display: none;
 }
+
 .swal2-icon.swal2-warning {
     border-color: #f4d538;
     color: #f4d538;
 }
+
 .swal2-styled.swal2-confirm {
     background-color: #62a4e2;
 }
 
+@font-face {
+    font-family: 'Asteroid';
+    src: url(../fonts/MR_ROBOT.ttf);
+}
 

@@ -4,22 +4,32 @@
     display: flex;
     justify-content: center;    
     margin-top: 100px;  
+    
     @media (max-width: 768px) {       
         width: 100%;   
     }    
+
     table, th, td {
         border: 2px solid black;
         border-collapse: collapse;
-    }       
+    }      
+
     th, td {
-        padding: 10px 15px;
+        padding: 10px 13px;
     }   
+
     th {
         background: #ffe359;
     }
+
     tr:nth-child(odd) {
         background: #8bc4e0a6;
     }
+
+    tr:nth-child(even) {
+        background: #d7d7d7;
+    }
+
     table {  
         @media (max-width: 768px) {
             display: block;     

@@ -7,31 +7,37 @@
     flex-flow: row wrap;
     align-items: flex-start;
     margin: 70px auto;
+
     .numberPasses {
         display: flex;
         flex-flow: column wrap;
         align-items: center;
     }
+    
     .astChosen {
         display: flex;
         justify-content: center;
         width: 60%;
         height: 40px;
         margin-bottom: 10px;
+
         .chosenInput {
             padding: 5px 20px;
             width: 90%;  
             border: 3px solid #61aed3;   
             color: #248ec4; 
+
             &:focus {
                 outline: none;
                 border: 3px solid #248ec4; 
                 transition: .3s;
             } 
         }   
+
         ::placeholder {
             font-size: 17px;           
-        }                 
+        }      
+
         @media (max-width: 700px) {
             width: 260px;
         }
@@ -42,29 +48,42 @@
         padding: 5px 0;
         border: 2px solid #717171;
         overflow-y: auto;
+
+        div {
+            &:hover p {
+                color: #ffe359;
+            }
+        }
     }    
+
     .timesPassed {
         display: block;
         padding: 10px;
         margin: 15px 0;
         font-size: 17px;  
         width: 250px;
+        color: #f4d538;
     }    
+
     .none {
         display: none;
     }
+
     p {
         width: 85%;
         display: inline-block;
         padding: 1px 10px;
         font-size: 16px;
+        color: #ddd;
     }
+
     i {
         color: #ff4b4b;
         width: 10px;  
         font-size: 18px; 
         position: relative;
         top: 2px;
+
         &:hover {
             cursor: pointer;
         }

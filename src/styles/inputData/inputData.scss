@@ -4,6 +4,7 @@
     flex-flow: row wrap;
     padding-top: 100px;    
     width: 100%;    
+
     form {
         position: relative;
         height: 180px;
@@ -11,13 +12,20 @@
         display: flex;
         flex-flow: row wrap;
         align-items: flex-end; 
+
         label {
             width: 30%;
             height: 40px;
             line-height: 40px;
             text-align: center;
             font-size: 17px;
+            color: #ddd;
         }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            color: #248ec4;   
+        }
+
         input[type=date] {
             width: 70%;
             height: 40px;
@@ -32,6 +40,7 @@
                 outline: none;
             }    
         }   
+
         .showTable {
             width: 150px;
             height: 40px;
@@ -39,11 +48,16 @@
             right: -265px;
             font-size: 15px;
             margin-top: 8px;
+            color: #f4d538;
+            &:hover {
+                color: #fff;
+            }
             @media (max-width: 440px) {
                 left: 50px;
                 top: 15px;
             }
         }
+        
         #startDate, #endDate {
             padding: 10px;
             width: 280px;

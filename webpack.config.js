@@ -13,10 +13,10 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/, 
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                } 
+                }
             },
             {
                 test: /\.html$/i,
@@ -29,8 +29,20 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader"
-                ] 
-            }
+                ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: "[name].[ext]",    
+                            outputPath: "font"
+                        }
+                    },
+                ],
+            },
         ]
     },
     plugins: [
