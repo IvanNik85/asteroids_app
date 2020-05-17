@@ -4,13 +4,35 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}  
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}   
+  
+::-webkit-scrollbar-thumb {
+    background: rgba(60,62,64,1);
+    background: linear-gradient(0deg, rgb(177, 176, 180) 13%, rgba(60,62,64,1) 100%); 
+}  
+
+::-webkit-scrollbar-thumb:horizontal{
+    background: rgba(60,62,64,1);
+    background: linear-gradient(-90deg, rgb(177, 176, 180) 13%, rgba(60,62,64,1) 100%); 
+}
+ 
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 body {
     font-family: 'Inter', sans-serif;
-    position: relative;
-    // background: #1c2840;
-    background: url('https://wallpaperplay.com/walls/full/c/9/d/17341.jpg') no-repeat center;
-    // background-size: cover;
+    position: relative;   
+    background: url('https://wallpaperplay.com/walls/full/c/9/d/17341.jpg') repeat center;   
     min-height: 100vh; 
+
     .wrap {
         position: absolute;
         background: rgba(0,0,0,.6);
@@ -21,8 +43,7 @@ body {
 
 .pageOne {    
 
-    .heading {
-        background: #f4d538;
+    .heading {        
         width: 400px;
         height: 90px;
         border: 4px solid #248ec4;
@@ -31,7 +52,6 @@ body {
         justify-content: center;
         align-items: center;
         margin: 20px auto;
-
         @media (max-width: 500px) {
             width: 315px;
             height: 75px;
@@ -41,7 +61,7 @@ body {
             text-align: center;
             font-family: 'Asteroid';
             font-weight: normal;
-            color: #248ec4;
+            color: #f4d538;
             font-size: 52px;
             margin-top: 5px;
             @media (max-width: 500px) {
@@ -54,16 +74,14 @@ body {
 .showTable, .timesPassed, .backBtn {
     border: 3px solid #248ec4;
     font-weight: 700;
-    color: #248ec4;
+    color:#ffe359;
     background: transparent;
     transition: .3s;
-
     &:hover {
         background: #248ec4;
         color: #fff;
         cursor: pointer;
     }    
-
     &:focus {
         outline: none;
     }    

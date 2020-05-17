@@ -1,14 +1,27 @@
 .pageTwo {
     position: relative;
     padding: 50px 100px;
-    height: 100vh;
-    background: url('https://wallpaperplay.com/walls/full/5/8/c/17411.jpg') no-repeat center;
+    min-height: 100vh;
+    background: url('https://wallpaperplay.com/walls/full/5/8/c/17411.jpg') repeat center;
     background-size: cover;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.4);
+    }
    
     .backBtn {
+        position: relative;
         width: 85px;
         height: 40px;
-        font-size: 17px;        
+        font-size: 17px;
+        margin-bottom: 25px;
+        color: #ffe359;    
     }
     
     .astOne {
@@ -20,6 +33,7 @@
         margin: 25px 0px;
 
         .name {
+            position: relative;
             width: 170px;
             height: 45px;            
             line-height: 45px;
@@ -29,6 +43,7 @@
         }
 
         .chart {
+            position: relative;
             width: 500px;
             height: 45px;      
 
@@ -37,9 +52,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                padding: 7px;
             }           
         }
-
+        
         @media (max-width: 776px) {
             height: 90px;
             margin: 15px 0px;

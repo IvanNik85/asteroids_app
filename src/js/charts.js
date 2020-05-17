@@ -68,7 +68,7 @@ export const Chart = (() => {
         })
         changePage();
     }   
-     
+
     // Going to table page and removing charts
     const goBack = () => {
         const astOne = document.querySelectorAll(".astOne"); 
@@ -85,7 +85,7 @@ export const Chart = (() => {
 
     return {
         charts,
-        changePage
+        changePage       
     }
 })()
 
