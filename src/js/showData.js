@@ -21,10 +21,10 @@ export const Show = (() => {
                     hazardousAsteroid = [...hazardousAsteroid, [element[0], item]];
                 }
             })
-        });        
+        });      
 
         // Get additional data 
-        hazardousAsteroid.map(data => Asteroids.additionalData(data[1].links.self));
+        hazardousAsteroid.map(data => Asteroids.additionalData(data[1].links.self));                
         // Generate table
         Create.table(hazardousAsteroid);
     }
