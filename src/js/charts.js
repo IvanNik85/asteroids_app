@@ -40,12 +40,13 @@ export const Chart = (() => {
             pageTwo.append(div);   
             div1.innerHTML = item[0];
             div3.innerHTML = item[1].length;
+            item[1].length === 0 && (div3.style.color = '#fff')
     
             // Animate charts
             let load = 0
             let int = setInterval(() => {
-                div3.style.width = `${load}%`;
-                if(load === item[1].length) {
+                div3.style.width = `${load}%`;                
+                if(load === item[1].length) {                    
                     clearInterval(int)
                 } else {
                     colorChoice();
@@ -63,7 +64,7 @@ export const Chart = (() => {
                     div3.style.background = '#ffa500';
                 } else if(item[1].length > 75){
                     div3.style.background = '#ff3f3f';
-                }   
+                } 
             }
         })
         changePage();

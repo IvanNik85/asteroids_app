@@ -25,17 +25,26 @@
             padding: 5px 20px;
             width: 90%;  
             border: 3px solid #61aed3;   
+            font-size: 17px;
             color: #248ec4; 
+            cursor: pointer;
+            @media (max-width: 700px) {
+                padding: 5px 5px 5px 20px;
+            }            
 
             &:focus {
                 outline: none;
                 border: 3px solid #248ec4; 
                 transition: .3s;
-            } 
-        }   
+            }             
+        } 
+
+        ::-webkit-calendar-picker-indicator {              
+            cursor: pointer;          
+        }
 
         ::placeholder {
-            font-size: 17px;           
+            font-size: 17px;             
         }      
 
         @media (max-width: 700px) {

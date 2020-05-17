@@ -26,8 +26,14 @@
             color: #ddd;   
         }
 
-        input[type="date"]::-webkit-calendar-picker-indicator {
+        input[type=date]::-webkit-calendar-picker-indicator {
             color: #248ec4;   
+            cursor: pointer;          
+        }
+
+        input[type=date]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            display: none;
         }
 
         input[type=date] {
@@ -40,7 +46,7 @@
             font-weight: 700;
             color: #757272;
             border: 2px solid #a0a0a0;
-            
+
             &:focus {
                 outline: none;
             }    
