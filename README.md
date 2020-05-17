@@ -1,6 +1,8 @@
 # asteroid_app
 
-An application that displays a potentially dangerous asteroids based on a entered<br>
+https://asteroids-app.netlify.app/
+
+An application that displays a potentially dangerous asteroids for Earth based on a entered<br>
 time interval [StartDate, EndDate]. The difference between StartDate and EndDate should not<br>
 be greater than 7 days.
 
