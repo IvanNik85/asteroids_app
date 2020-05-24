@@ -23,7 +23,10 @@ export const Create = (() => {
             tr.appendChild(th);
             tableHead.appendChild(tr);             
         })       
-    
+        let option = document.createElement("option");
+        option.setAttribute("value", `All Asteroids`);            
+        autocomplete.appendChild(option);
+
         one.map(hazardous => {            
             // Adding data to the table   
             let row = tableBody.insertRow(0);
