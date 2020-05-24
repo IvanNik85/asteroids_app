@@ -8,8 +8,9 @@ export const Asteroids = (() => {
 
     // Select asteroids and display them in the field
     const asteroidSelect = (e) => {
-        let selected = true;       
-         
+        let selected = true;      
+        allAsteroids = false;  
+
         // Creating selected asteroids list
         const createAsteroidList = (value) => {
             let wrap = document.createElement("div");
@@ -25,7 +26,7 @@ export const Asteroids = (() => {
         }
 
         // Adding asteroids to list according to selected values
-        history.map(val => {
+        history.map(val => {            
             if (e.target.value === val.name && chartValues.every(s => !~s.indexOf(e.target.value))) {
                 chartValues = [...chartValues, [val.name, val.close_approach_data]];
                 createAsteroidList(e.target.value);
@@ -53,7 +54,7 @@ export const Asteroids = (() => {
         )
         e.target.value = ""
     }
-    autoInput.addEventListener("change", asteroidSelect);
+    autoInput.addEventListener("change", asteroidSelect);       
 
     // Removing asteroids from selected list 
     const removeAsteroid = (e) => {
@@ -83,7 +84,8 @@ export const Asteroids = (() => {
     return {
         chartsData,
         historyData,
-        additionalData
+        additionalData,
+        allAsteroids    
     }
 })()
 

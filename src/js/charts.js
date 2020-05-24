@@ -3,10 +3,12 @@ import {Asteroids} from "./selectAsteroids";
 export const Chart = (() => {
     const pageOne = document.querySelector(".pageOne");   
     const pageTwo = document.querySelector(".pageTwo");  
-    const backBtn = document.querySelector(".backBtn");
-   
+    const backBtn = document.querySelector(".backBtn");    
+
     // Chart creating function
     const charts = () => {  
+        window.scrollTo(0, 0);
+        
         if(!Asteroids.chartsData().length) {
             Swal.fire(
                 `You didn't select an asteroid!`,
@@ -14,7 +16,7 @@ export const Chart = (() => {
                 'warning'
                 ) 
             return;
-        }    
+        }            
 
         // Filter asteroid passes near Earth 
         Asteroids.chartsData().map(item => {           

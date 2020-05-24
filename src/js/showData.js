@@ -9,7 +9,7 @@ export const Show = (() => {
         // Reset values
         hazardousAsteroid.length = 0;
         Asteroids.historyData().length = 0;
-        Asteroids.chartsData().length = 0;
+        Asteroids.chartsData().length = 0;       
         // Clear previous data
         removeOldValues();
         tableCreated = true;

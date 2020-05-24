@@ -22,10 +22,15 @@ export const Create = (() => {
             th.innerHTML = name;
             tr.appendChild(th);
             tableHead.appendChild(tr);             
-        })       
-        let option = document.createElement("option");
-        option.setAttribute("value", `All Asteroids`);            
-        autocomplete.appendChild(option);
+        })  
+
+        // Create option elements
+        const optionCreate = (opt) => {
+            let option = document.createElement("option");
+            option.setAttribute("value", opt);            
+            autocomplete.appendChild(option);
+        }         
+        optionCreate(`All Asteroids`) 
 
         one.map(hazardous => {            
             // Adding data to the table   
@@ -36,9 +41,7 @@ export const Create = (() => {
             row.insertCell(3).innerHTML = hazardous[1].estimated_diameter.meters.estimated_diameter_min;
             row.insertCell(4).innerHTML = hazardous[1].estimated_diameter.meters.estimated_diameter_max;
             // Adding autocomplete data
-            let option = document.createElement("option");
-            option.setAttribute("value", hazardous[1].name);            
-            autocomplete.appendChild(option);
+            optionCreate(hazardous[1].name)             
         })
        
         document.querySelector(".chosenInput").classList.remove("none");
