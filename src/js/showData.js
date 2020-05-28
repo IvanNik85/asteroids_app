@@ -25,8 +25,11 @@ export const Show = (() => {
 
         // Get additional data 
         hazardousAsteroid.map(data => Asteroids.additionalData(data[1].links.self));                
-        // Generate table
-        Create.table(hazardousAsteroid);
+        // Generate table  
+        document.querySelector(`.circle-loader`).style.display = `block`;  
+        setTimeout(function() {
+            Create.table(hazardousAsteroid);
+        }, 1000)        
     }
 
     // Removing old values function

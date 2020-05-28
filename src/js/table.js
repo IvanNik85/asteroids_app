@@ -47,7 +47,8 @@ export const Create = (() => {
         document.querySelector(".chosenInput").classList.remove("none");
         document.querySelector(".asteroids").classList.remove("none");
         timesPassed.classList.remove("none");
-        timesPassed.addEventListener("click", Chart.charts);       
+        timesPassed.addEventListener("click", Chart.charts); 
+        document.querySelector(`.circle-loader`).style.display = `none`;        
     }
     
     return {
