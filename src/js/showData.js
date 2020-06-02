@@ -24,11 +24,12 @@ export const Show = (() => {
         });      
 
         // Get additional data 
-        hazardousAsteroid.map(data => Asteroids.additionalData(data[1].links.self));                
+        hazardousAsteroid.map(data => Asteroids.additionalData(data[1].links.self));     
+
         // Generate table  
-        document.querySelector(`.circle-loader`).style.display = `block`;  
+        Create.showHide(`block`, `none`); 
         setTimeout(function() {
-            Create.table(hazardousAsteroid);
+            Create.table(hazardousAsteroid);            
         }, 1000)        
     }
 
