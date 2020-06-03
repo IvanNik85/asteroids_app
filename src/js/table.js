@@ -2,7 +2,6 @@ import { Chart } from "./charts";
 
 // Generating table and data
 export const Create = (() => { 
-
     const table = one => {
         const tableHeaders = ["Date", "Name", "Movement speed(km/h)", "Min.diameter(m)", "Max.diameter(m)"];
         const timesPassed = document.querySelector(".timesPassed");

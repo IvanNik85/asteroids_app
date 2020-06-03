@@ -1,12 +1,21 @@
 import { Show } from "./showData";
 
 // ******************** DATA ********************** //
-export const Data = (() => {
+export const Data = (() => {    
     const getData = () => {
         const inputStart = document.querySelector("#startDate");
         const inputEnd = document.querySelector("#endDate");
         const startDate = new Date(inputStart.value);
         const endDate = new Date(inputEnd.value);
+        
+        // Calculate date difference
+        const difference = (d1, d2) => {
+            let date1 = d1.getTime();
+            let date2 = d2.getTime();            
+            let diff = parseInt((date2 - date1)/(1000*60*60*24));
+            (date2 > date1 && diff < 0) && (diff *= -1)
+            return diff;
+        }      
 
         // Filter entered inputs and display values
         if (inputStart.value === "" || inputEnd.value === "") {
@@ -15,13 +24,13 @@ export const Data = (() => {
                 'Please try again',
                 'warning'
             )
-        } else if (endDate.getDate() - startDate.getDate() > 7 || endDate.getDate() - startDate.getDate() === 0) {
+        } else if (difference(startDate, endDate) > 7 || endDate.getDate() - startDate.getDate() === 0) {
             Swal.fire(
                 'The range must be 7 days or less!',
                 'Please try again',
                 'warning'
             )
-        } else if (startDate.getDate() > endDate.getDate()) {
+        } else if (startDate.getTime() > endDate.getTime()) {
             Swal.fire(
                 'Start date must be less than End date!',
                 'Please try again',
