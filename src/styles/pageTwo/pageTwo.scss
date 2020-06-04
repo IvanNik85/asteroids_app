@@ -14,6 +14,17 @@
         left: 0;
         background: rgba(0,0,0,.4);
     }
+
+    h2 {
+        position: relative;
+        margin: 20px 0 60px;
+        color: #fff;
+        z-index: 1;
+        @media (max-width: 870px) {
+            margin: 20px 0 30px;
+            font-size: 19px;
+        }
+    }
    
     .backBtn {
         position: relative;
