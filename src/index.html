@@ -11,50 +11,48 @@
     <title>Asteroidi</title>
 </head>
 
-<body>
-    <div class="wrap">
-        <div class="pageOne">
-            <div class="heading">
-                <h1>Asteroids</h1>
-            </div>
-            <div class="inputData">
-                <form>
-                    <label for="startDate">Start Date</label>
-                    <input type="date" id="startDate">
-                    <label for="endDate">End Date</label>
-                    <input type="date" id="endDate">
-                    <a href="#table"><button type="button" class="showTable">Show Asteroids</button></a>
-                </form>
-            </div>
-            <div class="tableData" id="table">
-                <div class="circle-loader">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>    
-            </div>
-            <div class="autocompleteBox">
-                <form class="astChosen">
-                    <input type="text" list="displayed" class="chosenInput none" placeholder="Select Asteroid" />
-                    <datalist id="displayed">
-                    </datalist>
-                </form>
-                <div class="numberPasses">
-                    <div class="asteroids none"></div>
-                    <button type="button" class="timesPassed none">Number of Earth Passes</button>
-                </div>
-            </div>
+<body>   
+    <div class="pageOne">
+        <div class="heading">
+            <h1>Asteroids</h1>
         </div>
-        <div class="pageTwo none">
-            <button type="button" class="backBtn">Back</button>
-            <h2> Number of passes near earth from 1900. to 1999.</h2>
+        <div class="inputData">
+            <form>
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate">
+                <label for="endDate">End Date</label>
+                <input type="date" id="endDate">
+                <a href="#table"><button type="button" class="showTable">Show Asteroids</button></a>
+            </form>
+        </div>
+        <div class="tableData" id="table">
+            <div class="circle-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>    
+        </div>
+        <div class="autocompleteBox">
+            <form class="astChosen">
+                <input type="text" list="displayed" class="chosenInput none" placeholder="Select Asteroid" />
+                <datalist id="displayed">
+                </datalist>
+            </form>
+            <div class="numberPasses">
+                <div class="asteroids none"></div>
+                <button type="button" class="timesPassed none">Number of Earth Passes</button>
+            </div>
         </div>
     </div>
+    <div class="pageTwo none">
+        <button type="button" class="backBtn">Back</button>
+        <h2> Number of passes near earth from 1900. to 1999.</h2>
+    </div>   
 </body>
 
 </html>

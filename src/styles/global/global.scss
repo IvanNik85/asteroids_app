@@ -30,19 +30,15 @@
 body {
     font-family: 'Inter', sans-serif;
     position: relative;   
-    background: url('../images/front.jpg') repeat center;   
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0, 0, 0.45)
+      ), url('../images/front.jpg') repeat center;   
+    width: 100vw; 
     min-height: 100vh; 
-
-    .wrap {
-        position: absolute;
-        background: rgba(0,0,0,.6);
-        width: 100vw;   
-        min-height: 100%;
-    }
 }
 
-.pageOne {    
-
+.pageOne {  
     .heading {        
         width: 400px;
         height: 90px;
