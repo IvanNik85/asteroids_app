@@ -51,6 +51,9 @@
             display: inline-block;
             font-size: 16px;
             color: #fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .chart {

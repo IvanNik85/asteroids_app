@@ -4,16 +4,18 @@ import { Asteroids } from "./selectAsteroids";
 export const Show = (() => {
     let tableCreated = false;
     let hazardousAsteroid = [];
+    const noAsteroidMessage = document.querySelector(`.tableData p`);
 
     const showData = dataPar => {
         // Reset values
         hazardousAsteroid.length = 0;
+        
         Asteroids.historyData().length = 0;
         Asteroids.chartsData().length = 0;       
-        // Clear previous data
-        removeOldValues();
+        // Clear previous data        
+        !noAsteroidMessage.innerHTML && removeOldValues();
         tableCreated = true;
-
+        noAsteroidMessage.innerHTML = ''
         // Filtering pottentialy hazardous asteroids
         Object.entries(dataPar.near_earth_objects).forEach(element => {
             element[1].map(item => {
@@ -29,7 +31,9 @@ export const Show = (() => {
         // Generate table  
         Create.showHide(`block`, `none`); 
         setTimeout(function() {
-            Create.table(hazardousAsteroid);            
+            hazardousAsteroid.length ?
+            Create.table(hazardousAsteroid) : 
+            noAsteroids()      
         }, 1000)        
     }
 
@@ -41,6 +45,11 @@ export const Show = (() => {
         tableCreated && option.forEach(r => r.parentNode.removeChild(r));
         const astField = document.querySelectorAll(".asteroids div");
         tableCreated && astField.forEach(r => r.parentNode.removeChild(r));
+    }
+    // No Asteroids in searched values
+    const noAsteroids = () => {
+        noAsteroidMessage.innerHTML = `No asteroids for selected period of time`;
+        Create.showHide(`none`, `none`)
     }
 
     return {

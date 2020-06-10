@@ -48,9 +48,9 @@ export const Create = (() => {
         document.querySelector(".asteroids").classList.remove("none");
         timesPassed.classList.remove("none");
         timesPassed.addEventListener("click", Chart.charts);  
-        showHide(`none`, `flex`)        
+        showHide(`none`, `flex`);        
     }
-
+    // Show loader and autocompleteBox function
     const showHide = (displayOne, displayTwo) => {
         const circleLoader = document.querySelector(`.circle-loader`);
         const autocompleteBox = document.querySelector(`.autocompleteBox`);
@@ -59,7 +59,7 @@ export const Create = (() => {
     }
 
     return {
-        showHide,
+        showHide,        
         table
     }
 })()
